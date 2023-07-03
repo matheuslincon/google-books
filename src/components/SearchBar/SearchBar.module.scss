@@ -7,14 +7,14 @@
   gap: 5px;
   margin: 50px auto;
   &__input {
-    background-color: #303135;
+    background-color: $background;
     width: 80%;
     height: 30px;
     border: none;
     border-radius: 10px;
   }
   &__button {
-    background-color: #303135;
+    background-color: $background;
     color: $primary;
     width: 100px;
     border: none;
