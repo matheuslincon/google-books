@@ -1,6 +1,9 @@
+@import '../../partials/variables.scss';
+
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: $primary;
 }
