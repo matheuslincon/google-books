@@ -1,13 +1,14 @@
 import style from './Book.module.scss';
 
 const Book = ({book}) => {
+  const { volumeInfo } = book
 
   return (
     <article className={style.book}>
-      <img src={book} alt="kitten" />
-      <h2>{book}</h2>
-      <h3>{`by ${book}`}</h3>
-      <p>{book}</p>
+      <img src={volumeInfo.imageLinks ? volumeInfo.imageLinks.thumbnail : ''} alt={volumeInfo.title} />
+      <h2>{volumeInfo.title}</h2>
+      <h3>{`by ${volumeInfo.authors[0]}`}</h3>
+      <p>{volumeInfo.description}</p>
     </article>
   )
 }

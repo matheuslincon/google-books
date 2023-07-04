@@ -21,7 +21,7 @@ const SearchBar = ({ handleSearch }) => {
     <>
       <form className={style.wrapper} onSubmit={onSubmit}>
         <input className={style.wrapper__input} type="text" id="searchInput" value={searchInput} onChange={onChange}/>
-        <button className={style.wrapper__button} onSubmit={onSubmit}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+        <button className={style.wrapper__button}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
       </form>
     </>
   )

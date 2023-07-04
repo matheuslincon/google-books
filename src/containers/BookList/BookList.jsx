@@ -8,7 +8,8 @@ const BookList = ({ search }) => {
   const [books, setBooks] = useState([]);
 
   const fetchResult = async (search) => {
-    setBooks(await getBooksBySearchValue(search));
+    const booksData = await getBooksBySearchValue(search)
+    setBooks(booksData);
   }
 
   useEffect(() => {
@@ -18,6 +19,8 @@ const BookList = ({ search }) => {
       setBooks(undefined);
     }
   },[search])
+
+  console.log(books)
 
   return (
     <>
