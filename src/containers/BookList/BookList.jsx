@@ -9,7 +9,6 @@ const BookList = ({ search }) => {
 
   const fetchResult = async (search) => {
     const booksData = await getBooksBySearchValue(search)
-    console.log(booksData)
     setBooks(booksData);
   }
 
