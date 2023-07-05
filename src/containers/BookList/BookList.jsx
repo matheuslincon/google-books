@@ -9,6 +9,7 @@ const BookList = ({ search }) => {
 
   const fetchResult = async (search) => {
     const booksData = await getBooksBySearchValue(search)
+    console.log(booksData)
     setBooks(booksData);
   }
 
@@ -17,8 +18,11 @@ const BookList = ({ search }) => {
       fetchResult(search);
     }
   },[search])
+
   return (
     <>
+      <p className={style.search_text}>{!books && `No results found for: ${search}`}</p>
+      <p className={style.search_text}>{books && books.length > 0 && `Showing results for: ${search}`}</p>
       <section className={style.list}>
         {books && books.map((book) => {
           return <Book key={book.id} book={book}/>
