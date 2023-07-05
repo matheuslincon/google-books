@@ -4,12 +4,12 @@
 .book {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 300px;
   border-radius: 4px;
   background-color: $background;
   padding: 1em;
-  box-shadow: 0 0 10px 1px $primary; 
+  box-shadow: 0 0 10px 1px $primary;
   img {
     border: 1px solid $primary;
     width: 150px;

@@ -15,8 +15,6 @@ const BookList = ({ search }) => {
   useEffect(() => {
     if(search){
       fetchResult(search);
-    } else {
-      setBooks(undefined);
     }
   },[search])
 
