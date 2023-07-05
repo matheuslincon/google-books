@@ -17,9 +17,6 @@ const BookList = ({ search }) => {
       fetchResult(search);
     }
   },[search])
-
-  console.log(books)
-
   return (
     <>
       <section className={style.list}>
