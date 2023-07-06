@@ -19,9 +19,9 @@ const Book = ({book}) => {
   return (
     <>
       <article className={style.book} onClick={handleShow}>
-        <img src={volumeInfo.imageLinks ? volumeInfo.imageLinks.thumbnail : ''} alt={volumeInfo.title} />
+        <img src={volumeInfo.imageLinks ? volumeInfo.imageLinks.thumbnail : 'https://source.unsplash.com/random/?book'} alt={volumeInfo.title} />
         <h2>{volumeInfo.title}</h2>
-        <h3>{`by ${volumeInfo.authors[0]}`}</h3>
+        <h3>{`by ${volumeInfo.authors ? volumeInfo.authors[0] : "Unkown"}`}</h3>
       </article>
       <BookModal show={show} book={book} onClose={onClose}/>
     </>

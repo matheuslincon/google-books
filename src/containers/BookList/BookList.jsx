@@ -16,7 +16,7 @@ const BookList = ({ search }) => {
       const booksData = await getBooksBySearchValue(search)
       setBooks(booksData);
     } catch(e) {
-      console.log(e)
+        console.log(e.message)
     } finally {
       setLoading(false)
     }
