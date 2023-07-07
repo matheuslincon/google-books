@@ -4,7 +4,7 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import BookList from "./containers/BookList/BookList";
 
 const App = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(null);
 
   const handleSearch = (value) => {
     setSearch(value);

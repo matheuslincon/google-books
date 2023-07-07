@@ -10,6 +10,8 @@ const BookList = ({ search }) => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // const firstRender = useRef(true);
+
   const fetchResult = async (search) => {
     setLoading(true)
     try {
@@ -23,13 +25,16 @@ const BookList = ({ search }) => {
   }
 
   useEffect(() => {
-    if(search){
-        fetchResult(search)
-      }
+    if(!search) {
+      setBooks([])
+      return
+    }
+    fetchResult(search)
   },[search])
 
   return (
     <>
+      <p className={style.search_text}>{search === "" && "Can not search for empty value !"}</p>
       <p className={style.search_text}>{loading && <FontAwesomeIcon icon={faSpinner} spin className={style.icon}/>}</p>
       <p className={style.search_text}>{!books && `No results found for: ${search}`}</p>
       <p className={style.search_text}>{books && books.length > 0 && `Showing results for: ${search}`}</p>
