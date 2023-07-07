@@ -5,6 +5,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
     color: $primary;
     margin-top: 12em;
+}
+
+@media only screen and (max-width: $phone) {
+    .header {
+        h2 {
+            font-size: 1.5em;
+        }
+        h4 {
+            margin-left: 2em;
+        }
+    }
 }
