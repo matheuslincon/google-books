@@ -1,0 +1,18 @@
+@import '../../partials/variables.scss';
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin: 2em;
+}
+
+.search_text {
+  text-align: center;
+}
+
+.icon {
+  font-size: 40px;
+  color: $primary;
+}
